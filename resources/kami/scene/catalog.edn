@@ -20,6 +20,10 @@
   {:domain :kami-game-scene :file "pokoa_items.edn"}
   {:domain :kami-input-scene :file "input.edn"}
   {:domain :kami-live :file "audio.edn"}
+  {:domain :kami-mangaka-scene :file "camera.edn"}
+  {:domain :kami-mangaka-scene :file "expression_lexicon.edn"}
+  {:domain :kami-mangaka-scene :file "pose_lexicon.edn"}
+  {:domain :kami-mangaka-scene :file "render.edn"}
   {:domain :kami-postfx-scene :file "postfx.edn"}
   {:domain :kami-skeleton-scene :file "humanoid.edn"}
   {:domain :kami-terrain-scene :file "biomes.edn"}
