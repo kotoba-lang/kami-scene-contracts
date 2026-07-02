@@ -1,7 +1,8 @@
 (ns kami.scene.contracts
   "EDN authority loader for KAMI scene-domain contracts."
-  (:require #?(:clj [clojure.edn :as edn])
-            #?(:clj [clojure.java.io :as io]))
+  #?(:clj
+     (:require [clojure.edn :as edn]
+               [clojure.java.io :as io]))
   #?(:clj
      (:import [java.security MessageDigest])))
 

@@ -2,7 +2,6 @@
   "Check that legacy kami-engine scene EDN mirrors this authority repo."
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]
-            [clojure.string :as str]
             [kami.scene.contracts :as contracts]))
 
 (def default-engine-root "../kami-engine")
