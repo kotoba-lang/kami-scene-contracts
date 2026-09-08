@@ -1,5 +1,5 @@
 (ns kami.scene.contracts-test
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [kami.scene.contracts :as contracts]
             [kami.scene.fixture-sync :as fixtures]
@@ -103,7 +103,7 @@
                   {:domain :kami-mangaka-scene :file "expression_lexicon.edn"})
         {:keys [aliases default canonical]} (:mangaka/expression-presets contract)
         resolve-name (fn [name]
-                       (get aliases (str/lower-case name) default))]
+                       (get aliases (str/lower name) default))]
     (is (= 8 (count canonical)))
     (is (= :happy (resolve-name "happy")))
     (is (= :happy (resolve-name "JOY")))
