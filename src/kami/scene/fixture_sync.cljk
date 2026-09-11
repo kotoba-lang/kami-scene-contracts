@@ -43,8 +43,8 @@
 
 (defn usage []
   (str "Usage:\n"
-       "  clojure -M:check-engine-fixtures [../kami-engine]\n"
-       "  clojure -M:sync-engine-fixtures [../kami-engine]\n"))
+       "  kbb -M:check-engine-fixtures [../kami-engine]\n"
+       "  kbb -M:sync-engine-fixtures [../kami-engine]\n"))
 
 (defn -main [& args]
   (let [mode (first args)

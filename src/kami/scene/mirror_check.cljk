@@ -49,7 +49,7 @@
 
 (defn usage []
   (str "Usage:\n"
-       "  clojure -M:check-engine-mirror [../kami-engine]\n"))
+       "  kbb -M:check-engine-mirror [../kami-engine]\n"))
 
 (defn -main [& args]
   (let [engine-root (or (first args) default-engine-root)

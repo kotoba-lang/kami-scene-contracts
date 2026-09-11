@@ -13,14 +13,14 @@ legacy engine fixture path, byte count, and sha256 for every contract. Engine
 Run:
 
 ```sh
-clojure -M:test
-clojure -M:authority-manifest
-clojure -M:check-engine-mirror ../kami-engine
-clojure -M:check-engine-fixtures ../kami-engine
+kbb -M:test
+kbb -M:authority-manifest
+kbb -M:check-engine-mirror ../kami-engine
+kbb -M:check-engine-fixtures ../kami-engine
 ```
 
 Regenerate legacy engine fixtures from this authority repo:
 
 ```sh
-clojure -M:sync-engine-fixtures ../kami-engine
+kbb -M:sync-engine-fixtures ../kami-engine
 ```
