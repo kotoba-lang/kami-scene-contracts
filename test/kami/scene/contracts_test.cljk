@@ -1,6 +1,6 @@
 (ns kami.scene.contracts-test
   (:require [kotoba.lang.text :as str]
-            [clojure.test :refer [deftest is testing]]
+            [kotoba.test :refer [deftest is testing]]
             [kami.scene.contracts :as contracts]
             [kami.scene.fixture-sync :as fixtures]
             [kami.scene.mirror-check :as mirror]))
