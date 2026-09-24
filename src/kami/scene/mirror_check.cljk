@@ -1,7 +1,7 @@
 (ns kami.scene.mirror-check
   "Check that legacy kami-engine scene EDN mirrors this authority repo."
   (:require [clojure.edn :as edn]
-            [clojure.java.io :as io]
+            [kotoba.io :as io]
             [kami.scene.contracts :as contracts]))
 
 (def default-engine-root "../kami-engine")
@@ -12,7 +12,7 @@
 
 (defn retired-engine-fixture?
   [engine-root {:keys [domain]}]
-  (not (.exists (io/file engine-root (name domain) "data"))))
+  (not (io/exists? (io/file engine-root (name domain) "data"))))
 
 (defn read-file-edn [path]
   (edn/read-string (slurp (io/file path))))
@@ -22,11 +22,11 @@
         path (engine-path engine-root entry)
         file (io/file path)]
     (cond
-      (and (not (.exists file))
+      (and (not (io/exists? file))
            (retired-engine-fixture? engine-root entry))
       {:entry entry :path path :ok? true :status :retired-engine-fixture}
 
-      (not (.exists file))
+      (not (io/exists? file))
       {:entry entry :path path :ok? false :problem :missing-engine-file}
 
       :else
