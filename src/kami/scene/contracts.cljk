@@ -4,7 +4,8 @@
      (:require [clojure.edn :as edn]
                [clojure.java.io :as io]))
   #?(:clj
-     (:import [java.security MessageDigest])))
+     (:import [java.security MessageDigest]))
+  (:require [kotoba.bytes :as kbytes]))
 
 (def catalog-resource "kami/scene/catalog.edn")
 
@@ -24,7 +25,7 @@
 
 #?(:clj
    (defn- utf8-bytes [s]
-     (.getBytes s "UTF-8")))
+     (kbytes/utf8-bytes s)))
 
 #?(:clj
    (defn- hex-byte [b]
